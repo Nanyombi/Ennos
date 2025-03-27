@@ -7,9 +7,10 @@ using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Schema;
 using System.Xml.Serialization;
-using YAT.View;
+using ENNOS;
+using ENNOS.View;
 
-namespace YAT
+namespace ENNOS
 {
     class MacroData : IXmlSerializable
     {
@@ -306,5 +307,9 @@ namespace YAT
             }
         }
 
+        internal void SetChecked(object @checked)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

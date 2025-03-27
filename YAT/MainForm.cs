@@ -18,10 +18,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 using System.Xml;
-using YAT.View;
+using ENNOS.View;
 using static System.Net.Mime.MediaTypeNames;
 
-namespace YAT
+namespace ENNOS
 {
     public partial class MainForm : Form
     {
@@ -1403,7 +1403,7 @@ namespace YAT
             }
         }
 
-        private void chkSelectAll_CheckedChanged(object sender, EventArgs e)
+        private void chkGETPHASE_CheckedChanged(object sender, EventArgs e)
         {
               List<MacroData> macroDataList = GetMacroLayoutOnCurrentTab();          
 
@@ -1415,7 +1415,7 @@ namespace YAT
                         {
                             if (macroDataList[counter] is not null)
                             {
-                                macroDataList[counter].SetChecked(chkSelectAll.Checked);
+                            //    macroDataList[counter].SetChecked(chkTESTMODE.Checked);
                             }
                         }
                     }
@@ -1813,6 +1813,7 @@ namespace YAT
         }
 
         private Chart m_lastChartClicked = null;
+        private object chkTESTMODE;
 
         private void CopyGraphToClipBoardAll(object sender, EventArgs e)
         {
@@ -1952,6 +1953,46 @@ namespace YAT
                 btnDisconnect.PerformClick();
                 btnConnect.PerformClick();
             }
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel8_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label11_Click_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click_3(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 

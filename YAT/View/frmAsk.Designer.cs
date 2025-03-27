@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace YAT.View
+namespace ENNOS.View
 {
     partial class frmAsk : Form
     {
