@@ -1,0 +1,11 @@
+C:\Users\nanyo\Source\Repos\YAT\YAT\bin\Debug\YAT.exe.config
+C:\Users\nanyo\Source\Repos\YAT\YAT\bin\Debug\YAT.exe
+C:\Users\nanyo\Source\Repos\YAT\YAT\bin\Debug\YAT.pdb
+C:\Users\nanyo\Source\Repos\YAT\YAT\obj\Debug\YAT.csproj.AssemblyReference.cache
+C:\Users\nanyo\Source\Repos\YAT\YAT\obj\Debug\YAT.MainForm.resources
+C:\Users\nanyo\Source\Repos\YAT\YAT\obj\Debug\YAT.Properties.Resources.resources
+C:\Users\nanyo\Source\Repos\YAT\YAT\obj\Debug\YAT.View.frmAsk.resources
+C:\Users\nanyo\Source\Repos\YAT\YAT\obj\Debug\YAT.csproj.GenerateResource.cache
+C:\Users\nanyo\Source\Repos\YAT\YAT\obj\Debug\YAT.csproj.CoreCompileInputs.cache
+C:\Users\nanyo\Source\Repos\YAT\YAT\obj\Debug\YAT.exe
+C:\Users\nanyo\Source\Repos\YAT\YAT\obj\Debug\YAT.pdb
