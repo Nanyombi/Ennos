@@ -63,7 +63,7 @@ namespace ENNOS
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tabMacro = new System.Windows.Forms.TabControl();
+            //this.tabMacro = new System.Windows.Forms.TabControl();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.btnRemoveTab = new System.Windows.Forms.Button();
             this.btnRenameTab = new System.Windows.Forms.Button();
@@ -79,7 +79,7 @@ namespace ENNOS
             this.label11 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SETMOT = new System.Windows.Forms.Label();
-            this.btnNew = new System.Windows.Forms.Button();
+            //this.btnNew = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.chkWaitForTerminator = new System.Windows.Forms.CheckBox();
@@ -117,6 +117,11 @@ namespace ENNOS
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.importToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.terminalToolStripMenuItemImportTerminalpp = new System.Windows.Forms.ToolStripMenuItem();
+            this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.tableLayoutPanel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
@@ -146,6 +151,7 @@ namespace ENNOS
             ((System.ComponentModel.ISupportInitialize)(this.chrtLoggingData1)).BeginInit();
             this.tableLayoutPanel12.SuspendLayout();
             this.mnustrForm.SuspendLayout();
+            this.tableLayoutPanel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel2
@@ -489,10 +495,11 @@ namespace ENNOS
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.28816F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel1.Controls.Add(this.tabMacro, 0, 3);
+            //this.tableLayoutPanel1.Controls.Add(this.tabMacro, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel5, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel7, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel8, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel10, 0, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
@@ -508,16 +515,16 @@ namespace ENNOS
             // 
             // tabMacro
             // 
-            this.tabMacro.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabMacro.Location = new System.Drawing.Point(0, 90);
-            this.tabMacro.Margin = new System.Windows.Forms.Padding(0, 4, 4, 4);
-            this.tabMacro.Name = "tabMacro";
-            this.tabMacro.SelectedIndex = 0;
-            this.tabMacro.Size = new System.Drawing.Size(641, 470);
-            this.tabMacro.TabIndex = 5;
-            this.tabMacro.SelectedIndexChanged += new System.EventHandler(this.tabMacro_SelectedIndexChanged);
-            this.tabMacro.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tabMacro_MouseDown);
-            this.tabMacro.MouseMove += new System.Windows.Forms.MouseEventHandler(this.tabMacro_MouseMove);
+            //this.tabMacro.Dock = System.Windows.Forms.DockStyle.Fill;
+            //this.tabMacro.Location = new System.Drawing.Point(0, 90);
+            //this.tabMacro.Margin = new System.Windows.Forms.Padding(0, 4, 4, 4);
+            //this.tabMacro.Name = "tabMacro";
+            //this.tabMacro.SelectedIndex = 0;
+            //this.tabMacro.Size = new System.Drawing.Size(641, 470);
+            //this.tabMacro.TabIndex = 5;
+            //this.tabMacro.SelectedIndexChanged += new System.EventHandler(this.tabMacro_SelectedIndexChanged);
+            //this.tabMacro.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tabMacro_MouseDown);
+            //this.tabMacro.MouseMove += new System.Windows.Forms.MouseEventHandler(this.tabMacro_MouseMove);
             // 
             // tableLayoutPanel5
             // 
@@ -581,7 +588,7 @@ namespace ENNOS
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.16854F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 71F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 207F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 129F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 131F));
             this.tableLayoutPanel7.Controls.Add(this.checkBox2, 4, 0);
             this.tableLayoutPanel7.Controls.Add(this.label13, 2, 0);
             this.tableLayoutPanel7.Controls.Add(this.comboBox3, 1, 0);
@@ -600,10 +607,10 @@ namespace ENNOS
             // 
             this.checkBox2.AutoSize = true;
             this.checkBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox2.Location = new System.Drawing.Point(519, 4);
+            this.checkBox2.Location = new System.Drawing.Point(517, 4);
             this.checkBox2.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(122, 29);
+            this.checkBox2.Size = new System.Drawing.Size(124, 29);
             this.checkBox2.TabIndex = 47;
             this.checkBox2.Text = "TESTMODE";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -612,7 +619,7 @@ namespace ENNOS
             // 
             this.label13.AutoSize = true;
             this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label13.Location = new System.Drawing.Point(240, 0);
+            this.label13.Location = new System.Drawing.Point(238, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(65, 37);
             this.label13.TabIndex = 46;
@@ -627,7 +634,7 @@ namespace ENNOS
             this.comboBox3.Location = new System.Drawing.Point(86, 0);
             this.comboBox3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(147, 24);
+            this.comboBox3.Size = new System.Drawing.Size(145, 24);
             this.comboBox3.TabIndex = 45;
             // 
             // label12
@@ -643,7 +650,7 @@ namespace ENNOS
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(311, 3);
+            this.textBox1.Location = new System.Drawing.Point(309, 3);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(196, 22);
             this.textBox1.TabIndex = 48;
@@ -660,7 +667,7 @@ namespace ENNOS
             this.tableLayoutPanel8.Controls.Add(this.label11, 2, 0);
             this.tableLayoutPanel8.Controls.Add(this.comboBox1, 1, 0);
             this.tableLayoutPanel8.Controls.Add(this.SETMOT, 0, 0);
-            this.tableLayoutPanel8.Controls.Add(this.btnNew, 4, 0);
+            //this.tableLayoutPanel8.Controls.Add(this.btnNew, 4, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(0);
@@ -719,16 +726,16 @@ namespace ENNOS
             // 
             // btnNew
             // 
-            this.btnNew.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnNew.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnNew.Location = new System.Drawing.Point(518, 4);
-            this.btnNew.Margin = new System.Windows.Forms.Padding(4);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(123, 29);
-            this.btnNew.TabIndex = 3;
-            this.btnNew.Text = "RUNMOT";
-            this.btnNew.UseVisualStyleBackColor = false;
-            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            //this.btnNew.BackColor = System.Drawing.SystemColors.ControlLight;
+            //this.btnNew.Dock = System.Windows.Forms.DockStyle.Fill;
+            //this.btnNew.Location = new System.Drawing.Point(518, 4);
+            //this.btnNew.Margin = new System.Windows.Forms.Padding(4);
+            //this.btnNew.Name = "btnNew";
+            //this.btnNew.Size = new System.Drawing.Size(123, 29);
+            //this.btnNew.TabIndex = 3;
+            //this.btnNew.Text = "RUNMOT";
+            //this.btnNew.UseVisualStyleBackColor = false;
+            //this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // groupBox3
             // 
@@ -1151,7 +1158,7 @@ namespace ENNOS
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33444F));
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33444F));
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33111F));
-            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 306F));
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 309F));
             this.tableLayoutPanel12.Controls.Add(this.label10, 0, 0);
             this.tableLayoutPanel12.Controls.Add(this.chkGraphSelection, 2, 0);
             this.tableLayoutPanel12.Controls.Add(this.txtTimerSpeed, 1, 0);
@@ -1183,10 +1190,10 @@ namespace ENNOS
             this.chkGraphSelection.Checked = true;
             this.chkGraphSelection.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkGraphSelection.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chkGraphSelection.Location = new System.Drawing.Point(455, 4);
+            this.chkGraphSelection.Location = new System.Drawing.Point(454, 4);
             this.chkGraphSelection.Margin = new System.Windows.Forms.Padding(4);
             this.chkGraphSelection.Name = "chkGraphSelection";
-            this.chkGraphSelection.Size = new System.Drawing.Size(294, 33);
+            this.chkGraphSelection.Size = new System.Drawing.Size(293, 33);
             this.chkGraphSelection.TabIndex = 1;
             this.chkGraphSelection.Text = "Both the graphs";
             this.chkGraphSelection.UseVisualStyleBackColor = true;
@@ -1198,17 +1205,17 @@ namespace ENNOS
             this.txtTimerSpeed.Location = new System.Drawing.Point(153, 4);
             this.txtTimerSpeed.Margin = new System.Windows.Forms.Padding(4);
             this.txtTimerSpeed.Name = "txtTimerSpeed";
-            this.txtTimerSpeed.Size = new System.Drawing.Size(294, 22);
+            this.txtTimerSpeed.Size = new System.Drawing.Size(293, 22);
             this.txtTimerSpeed.TabIndex = 2;
             this.txtTimerSpeed.Text = "1000";
             // 
             // btnClearGraphs
             // 
             this.btnClearGraphs.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnClearGraphs.Location = new System.Drawing.Point(1059, 4);
+            this.btnClearGraphs.Location = new System.Drawing.Point(1056, 4);
             this.btnClearGraphs.Margin = new System.Windows.Forms.Padding(4);
             this.btnClearGraphs.Name = "btnClearGraphs";
-            this.btnClearGraphs.Size = new System.Drawing.Size(300, 33);
+            this.btnClearGraphs.Size = new System.Drawing.Size(303, 33);
             this.btnClearGraphs.TabIndex = 3;
             this.btnClearGraphs.Text = "Clear graph(s)";
             this.btnClearGraphs.UseVisualStyleBackColor = true;
@@ -1257,6 +1264,66 @@ namespace ENNOS
             this.terminalToolStripMenuItemImportTerminalpp.Size = new System.Drawing.Size(169, 26);
             this.terminalToolStripMenuItemImportTerminalpp.Text = "Terminal++";
             this.terminalToolStripMenuItemImportTerminalpp.Click += new System.EventHandler(this.terminalToolStripMenuItemImportTerminalpp_Click);
+            // 
+            // tableLayoutPanel10
+            // 
+            this.tableLayoutPanel10.ColumnCount = 3;
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.76106F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.23894F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 186F));
+            this.tableLayoutPanel10.Controls.Add(this.button2, 0, 1);
+            this.tableLayoutPanel10.Controls.Add(this.textBox2, 1, 0);
+            this.tableLayoutPanel10.Controls.Add(this.button1, 2, 0);
+            this.tableLayoutPanel10.Controls.Add(this.label14, 0, 0);
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 89);
+            this.tableLayoutPanel10.Name = "tableLayoutPanel10";
+            this.tableLayoutPanel10.RowCount = 2;
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(639, 89);
+            this.tableLayoutPanel10.TabIndex = 15;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label14.Location = new System.Drawing.Point(3, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(124, 44);
+            this.label14.TabIndex = 10;
+            this.label14.Text = "Speed:";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button1.Location = new System.Drawing.Point(456, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(179, 36);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "RUNMOT";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(133, 3);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(315, 22);
+            this.textBox2.TabIndex = 49;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button2.Location = new System.Drawing.Point(4, 48);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(122, 37);
+            this.button2.TabIndex = 50;
+            this.button2.Text = "CONFIRM";
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // MainForm
             // 
@@ -1312,6 +1379,8 @@ namespace ENNOS
             this.tableLayoutPanel12.PerformLayout();
             this.mnustrForm.ResumeLayout(false);
             this.mnustrForm.PerformLayout();
+            this.tableLayoutPanel10.ResumeLayout(false);
+            this.tableLayoutPanel10.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1339,7 +1408,7 @@ namespace ENNOS
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TabControl tabMacro;
+        //private System.Windows.Forms.TabControl tabMacro;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
@@ -1407,6 +1476,11 @@ namespace ENNOS
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBox2;
         //private System.Windows.Fo//rms.ComboBox cboTimerSendSelected;
     }
 }

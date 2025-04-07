@@ -166,7 +166,7 @@ namespace ENNOS
 
         void SetupDefaultTab()
         {
-            tabMacro.TabPages.Clear();
+           // tabMacro.TabPages.Clear();
 
 
 
@@ -174,10 +174,10 @@ namespace ENNOS
             m_ConfiguredMacro.Clear();
             UpdateFileName("");
 
-            tabMacro.TabPages.Add(m_tabPagePlus);
-            tabMacro.SelectedTab = CreateNewAndAddTabPage("Default", false);
+           // tabMacro.TabPages.Add(m_tabPagePlus);
+            //tabMacro.SelectedTab = CreateNewAndAddTabPage("Default", false);
 
-            AddMacroToPanel(GetCurrentSelectedTab(), true);
+            //AddMacroToPanel(GetCurrentSelectedTab(), true);
             UpdateButtonsAndStatus(true);
         }
 
@@ -355,11 +355,11 @@ namespace ENNOS
         {
             MacroTab tab = null;
 
-            int index = GetCurrentSelectedTab();
+            //int index = GetCurrentSelectedTab();
 
-            if (index < m_ConfiguredMacro.Count)
+            //if (index < m_ConfiguredMacro.Count)
             {
-                tab = m_ConfiguredMacro[index];
+               // tab = m_ConfiguredMacro[index];
             }
 
             return tab;
@@ -509,21 +509,21 @@ namespace ENNOS
             //test the object
             if (sender is MacroData)
             {
-                int index = GetCurrentSelectedTab();
+                //int index = GetCurrentSelectedTab();
 
-                if (index < m_ConfiguredMacro.Count)
+                //if (index < m_ConfiguredMacro.Count)
                 {
-                    MacroTab tab = m_ConfiguredMacro[index];
+                    //MacroTab tab = m_ConfiguredMacro[index];
 
-                    for (Int32 counter = 0; counter < tab.elements.Count; counter++)
+                    //for (Int32 counter = 0; counter < tab.elements.Count; counter++)
                     {
-                        if (tab.elements[counter] is MacroData)
+                        //if (tab.elements[counter] is MacroData)
                         {
-                            if (((MacroData)tab.elements[counter]) == ((MacroData)sender))
+                            //if (((MacroData)tab.elements[counter]) == ((MacroData)sender))
                             {
-                                tab.elements.RemoveAt(counter);
-                                counter = Int32.MaxValue - 2;
-                                UpdateGrid(index);
+                                //tab.elements.RemoveAt(counter);
+                               // counter = Int32.MaxValue - 2;
+                                //UpdateGrid(index);
                             }
 
 
@@ -537,22 +537,22 @@ namespace ENNOS
 
         public void MacroElementInsertBeforeMe(object sender, EventArgs e)
         {
-            int index = GetCurrentSelectedTab();
+            //int index = GetCurrentSelectedTab();
 
-            if (index < m_ConfiguredMacro.Count)
+            //if (index < m_ConfiguredMacro.Count)
             {
-                MacroTab tab = m_ConfiguredMacro[index];
+                //MacroTab tab = m_ConfiguredMacro[index];
 
-                for (Int32 counter = 0; counter < tab.elements.Count; counter++)
+                //for (Int32 counter = 0; counter < tab.elements.Count; counter++)
                 {
-                    if (tab.elements[counter] is MacroData)
+                    //if (tab.elements[counter] is MacroData)
                     {
-                        if (((MacroData)tab.elements[counter]) == ((MacroData)sender))
+                        //if (((MacroData)tab.elements[counter]) == ((MacroData)sender))
                         {
-                            tab.elements.Insert(counter, CreateNewMacro());
+                            //tab.elements.Insert(counter, CreateNewMacro());
 
-                            UpdateGrid(index);
-                            counter++;
+                           // UpdateGrid(index);
+                            //counter++;
                         }
                     }
                 }
@@ -561,25 +561,25 @@ namespace ENNOS
 
         public void MacroElementCloneMe(object sender, EventArgs e)
         {
-            int index = GetCurrentSelectedTab();
+            //int index = GetCurrentSelectedTab();
 
-            if (index < m_ConfiguredMacro.Count)
+            //if (index < m_ConfiguredMacro.Count)
             {
-                MacroTab tab = m_ConfiguredMacro[index];
+                //MacroTab tab = m_ConfiguredMacro[index];
 
-                for (Int32 counter = 0; counter < tab.elements.Count; counter++)
+                //for (Int32 counter = 0; counter < tab.elements.Count; counter++)
                 {
-                    if (tab.elements[counter] is MacroData)
+                    //if (tab.elements[counter] is MacroData)
                     {
-                        if (((MacroData)tab.elements[counter]) == ((MacroData)sender))
+                        //if (((MacroData)tab.elements[counter]) == ((MacroData)sender))
                         {
-                            MacroData data = CreateNewMacro();
-                            data.CloneSettings((MacroData)sender);
+                            //MacroData data = CreateNewMacro();
+                            //data.CloneSettings((MacroData)sender);
 
-                            tab.elements.Insert(counter, data);
+                            //tab.elements.Insert(counter, data);
 
-                            UpdateGrid(index);
-                            counter++;
+                            //UpdateGrid(index);
+                            //counter++;
                         }
                     }
                 }
@@ -606,16 +606,16 @@ namespace ENNOS
                         using (myStream)
                         {
                             //remove the current elements
-                            tabMacro.SuspendLayout();
+                            //tabMacro.SuspendLayout();
                             if (clearOldTabPages == true)
                             {
-                                tabMacro.TabPages.Clear();
+                                //tabMacro.TabPages.Clear();
                                 m_ConfiguredMacro.Clear();
                             }
                             else
                             {
                                 // remove the tab+ from the tab pages
-                                tabMacro.TabPages.Remove(m_tabPagePlus);
+                                //tabMacro.TabPages.Remove(m_tabPagePlus);
                             }
 
                             XmlReaderSettings settings = new XmlReaderSettings();
@@ -638,8 +638,8 @@ namespace ENNOS
                                                 break;
                                             case "Macro":
                                                 //add to the last one
-                                                MacroData macroSetting = AddMacroToPanel(tabMacro.TabPages.Count - 1, false);
-                                                macroSetting.ReadXml(reader);
+                                               // MacroData macroSetting = AddMacroToPanel(tabMacro.TabPages.Count - 1, false);
+                                               // macroSetting.ReadXml(reader);
                                                 break;
                                             default:
                                                 Console.WriteLine("Start Element {0}", reader.Name);
@@ -664,17 +664,17 @@ namespace ENNOS
                             //close the stream
                             reader.Close();
 
-                            tabMacro.TabPages.Add(m_tabPagePlus);
-                            tabMacro.SelectedIndex = 0;
+                           // tabMacro.TabPages.Add(m_tabPagePlus);
+                            //tabMacro.SelectedIndex = 0;
 
-                            for (int counter = 0; counter < tabMacro.TabPages.Count - 1; counter++)
+                            //for (int counter = 0; counter < tabMacro.TabPages.Count - 1; counter++)
                             {
-                                UpdateGrid(counter);
+                                //UpdateGrid(counter);
                             }
 
 
 
-                            tabMacro.ResumeLayout();
+                           // tabMacro.ResumeLayout();
                         }
                     }
                     UpdateFileName(openFileDialog1.FileName);
@@ -858,31 +858,31 @@ namespace ENNOS
         }
 
 
-        private int GetCurrentSelectedTab()
-        {
-            return tabMacro.SelectedIndex;
-        }
+        //private int GetCurrentSelectedTab()
+        //{
+            //return tabMacro.SelectedIndex;
+        //}
 
         private TableLayoutPanel GetTableLayoutPanelOnTab(int index)
         {
             TableLayoutPanel foundItem = null;
-            if (index < tabMacro.TabCount)
+           // if (index < tabMacro.TabCount)
             {
-                TabPage selectPage = tabMacro.TabPages[index];
+                //TabPage selectPage = tabMacro.TabPages[index];
                 //check element
-                if (selectPage != null)
+                //if (selectPage != null)
                 {
-                    foundItem = (TableLayoutPanel)selectPage.Controls[0];
+                    //foundItem = (TableLayoutPanel)selectPage.Controls[0];
                 }
             }
 
             return foundItem;
         }
 
-        private List<MacroData> GetMacroLayoutOnCurrentTab()
-        {
-            return m_ConfiguredMacro[tabMacro.SelectedIndex].elements;
-        }
+        //private List<MacroData> GetMacroLayoutOnCurrentTab()
+        //{
+            //return m_ConfiguredMacro[tabMacro.SelectedIndex].elements;
+        //}
 
         private MacroData CreateNewMacro(string buttonName, string command)
         {
@@ -932,17 +932,17 @@ namespace ENNOS
         {
             for (int counter = 0; counter < count - 1; counter++)
             {
-                AddMacroToPanel(GetCurrentSelectedTab(), false);
+                //AddMacroToPanel(GetCurrentSelectedTab(), false);
             }
 
-            AddMacroToPanel(GetCurrentSelectedTab(), true);
+            //AddMacroToPanel(GetCurrentSelectedTab(), true);
             ReportDataDirty();
 
-            TableLayoutPanel layout = GetTableLayoutPanelOnTab(GetCurrentSelectedTab());
-            if (layout != null)
+            //TableLayoutPanel layout = GetTableLayoutPanelOnTab(GetCurrentSelectedTab());
+            //if (layout != null)
             {
-                layout.VerticalScroll.Value = layout.VerticalScroll.Maximum;
-                layout.Update();
+                //layout.VerticalScroll.Value = layout.VerticalScroll.Maximum;
+                //layout.Update();
             }
         }
 
@@ -1025,11 +1025,11 @@ namespace ENNOS
             tp.UseVisualStyleBackColor = true;
             if (appendToEnd == false)
             {
-                tabMacro.TabPages.Insert(tabMacro.TabPages.Count - 1, tp);
+                //tabMacro.TabPages.Insert(tabMacro.TabPages.Count - 1, tp);
             }
             else
             {
-                tabMacro.TabPages.Add(tp);
+                //tabMacro.TabPages.Add(tp);
             }
 
             // make the correct back ground
@@ -1043,14 +1043,14 @@ namespace ENNOS
         {
             AskController getNewName = new AskController(this);
             //get the new name
-            string newName = getNewName.GetNewName(tabMacro.SelectedTab.Text);
+            //string newName = getNewName.GetNewName(tabMacro.SelectedTab.Text);
 
             //check the length
-            if (newName.Length > 0)
+            //if (newName.Length > 0)
             {
                 //copy the new name
-                tabMacro.SelectedTab.Text = newName;
-                m_ConfiguredMacro[tabMacro.SelectedIndex].name = newName;
+                //tabMacro.SelectedTab.Text = newName;
+               // m_ConfiguredMacro[tabMacro.SelectedIndex].name = newName;
                 ReportDataDirty();
             }
         }
@@ -1058,13 +1058,13 @@ namespace ENNOS
         private void btnRemoveTab_Click(object sender, EventArgs e)
         {
             //check for at least one tab
-            if (tabMacro.TabCount > 1)
+            //if (tabMacro.TabCount > 1)
             {
-                if (MessageBox.Show(this, "Are you sure you want to remove \"" + tabMacro.SelectedTab.Text + "\"?", "Remove tab", MessageBoxButtons.YesNo) == DialogResult.Yes)
+               // if (MessageBox.Show(this, "Are you sure you want to remove \"" + tabMacro.SelectedTab.Text + "\"?", "Remove tab", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    m_ConfiguredMacro.RemoveAt(tabMacro.SelectedIndex);
+                   // m_ConfiguredMacro.RemoveAt(tabMacro.SelectedIndex);
                     //remove the selected tab
-                    tabMacro.TabPages.Remove(tabMacro.SelectedTab);
+                    //tabMacro.TabPages.Remove(tabMacro.SelectedTab);
                     ReportDataDirty();
                 }
             }
@@ -1162,21 +1162,21 @@ namespace ENNOS
                 //select the tab
                 TabPage clone = CreateNewAndAddTabPage(nameTab, false);
 
-                int currentIndex = GetCurrentSelectedTab();
+                //int currentIndex = GetCurrentSelectedTab();
                 // -2 as + tab = 1, and the count is 0 based.
-                int cloneIndex = tabMacro.TabPages.Count - 2;
+                //int cloneIndex = tabMacro.TabPages.Count - 2;
 
-                for (Int32 counter = 0; counter < m_ConfiguredMacro[currentIndex].elements.Count; counter++)
+                //for (Int32 counter = 0; counter < m_ConfiguredMacro[currentIndex].elements.Count; counter++)
                 {
                     MacroData local = CreateNewMacro(); ;
-                    local.CloneSettings(m_ConfiguredMacro[currentIndex].elements[counter]);
-                    m_ConfiguredMacro[cloneIndex].elements.Add(local);
+                    //local.CloneSettings(m_ConfiguredMacro[currentIndex].elements[counter]);
+                    //m_ConfiguredMacro[cloneIndex].elements.Add(local);
                 }
 
-                UpdateGrid(cloneIndex);
+                //UpdateGrid(cloneIndex);
 
                 //select the clone
-                tabMacro.SelectedIndex = cloneIndex;
+                //tabMacro.SelectedIndex = cloneIndex;
 
                 ReportDataDirty();                
 
@@ -1249,22 +1249,22 @@ namespace ENNOS
 
         private void btnSendAll_Click(object sender, EventArgs e)
         {
-            List<MacroData> macroDataList = GetMacroLayoutOnCurrentTab();
+            //List<MacroData> macroDataList = GetMacroLayoutOnCurrentTab();
 
             if (m_serialPort.IsOpen == true)
             {
 
-                if (macroDataList != null)
+               // if (macroDataList != null)
                 {
-                    if (macroDataList.Count > 0)
+                   // if (macroDataList.Count > 0)
                     {
                         btnClearLog.PerformClick();
 
-                        for (Int32 counter = 0; counter < macroDataList.Count; counter++)
+                        //for (Int32 counter = 0; counter < macroDataList.Count; counter++)
                         {
-                            if (macroDataList[counter] is not null)
+                            //if (macroDataList[counter] is not null)
                             {
-                                macroDataList[counter].SendIfChecked();
+                                //macroDataList[counter].SendIfChecked();
                             }
                         }
                     }
@@ -1386,7 +1386,7 @@ namespace ENNOS
 
         private void tabMacro_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(tabMacro.SelectedTab == m_tabPagePlus)
+            //if(tabMacro.SelectedTab == m_tabPagePlus)
             {
                 AskController getTabName = new AskController(this);
 
@@ -1396,13 +1396,13 @@ namespace ENNOS
                 if (nameTab.Length > 0)
                 {
                     //select the tab
-                    tabMacro.SelectedTab = CreateNewAndAddTabPage(nameTab, false);
-                    AddMacroToPanel(GetCurrentSelectedTab(), true);
+                    //tabMacro.SelectedTab = CreateNewAndAddTabPage(nameTab, false);
+                    //AddMacroToPanel(GetCurrentSelectedTab(), true);
                     ReportDataDirty();
                 }
                 else
                 {
-                    tabMacro.SelectedIndex = 0;
+                    //tabMacro.SelectedIndex = 0;
                 }
             }
         }
@@ -1440,16 +1440,16 @@ namespace ENNOS
 
         private void chkGSETMOT_CheckedChanged(object sender, EventArgs e)
         {
-              List<MacroData> macroDataList = GetMacroLayoutOnCurrentTab();          
+              //List<MacroData> macroDataList = GetMacroLayoutOnCurrentTab();          
 
-                if (macroDataList != null)
+                //if (macroDataList != null)
                 {
 
-                    if (macroDataList.Count > 0)
+                    //if (macroDataList.Count > 0)
                     {
-                        for (Int32 counter = 0; counter < macroDataList.Count; counter++)
+                        //for (Int32 counter = 0; counter < macroDataList.Count; counter++)
                         {
-                            if (macroDataList[counter] is not null)
+                            //if (macroDataList[counter] is not null)
                             {
                             //    macroDataList[counter].SetChecked(chkTESTMODE.Checked);
                             }
@@ -1506,7 +1506,7 @@ namespace ENNOS
 
             if (Swap(m_DraggedTab, tab) == true)
             {
-                tabMacro.SelectedTab = m_DraggedTab;
+               // tabMacro.SelectedTab = m_DraggedTab;
                 ReportDataDirty();
             }
         }
@@ -1514,13 +1514,13 @@ namespace ENNOS
         private TabPage TabAt(Point position)
         {
             // -1 as the last one is the +
-            int count = tabMacro.TabCount - 1;
+            //int count = tabMacro.TabCount - 1;
 
-            for (int i = 0; i < count; i++)
+            //for (int i = 0; i < count; i++)
             {
-                if (tabMacro.GetTabRect(i).Contains(position))
+                //if (tabMacro.GetTabRect(i).Contains(position))
                 {
-                    return tabMacro.TabPages[i];
+                    //return tabMacro.TabPages[i];
                 }
             }
 
@@ -1529,19 +1529,19 @@ namespace ENNOS
 
         private bool Swap(TabPage a, TabPage b)
         {
-            int i = tabMacro.TabPages.IndexOf(a);
-            int j = tabMacro.TabPages.IndexOf(b);
+            //int i = tabMacro.TabPages.IndexOf(a);
+            //int j = tabMacro.TabPages.IndexOf(b);
             bool swapped = false;
 
-            if ((i >= 0) && (j >= 0))
+            //if ((i >= 0) && (j >= 0))
             {
                 // swap the inter data as well
-                MacroTab copy =  m_ConfiguredMacro[i];
-                m_ConfiguredMacro[i] = m_ConfiguredMacro[j];
-                m_ConfiguredMacro[j] = copy;
+                //MacroTab copy =  m_ConfiguredMacro[i];
+                //m_ConfiguredMacro[i] = m_ConfiguredMacro[j];
+               // m_ConfiguredMacro[j] = copy;
 
-                tabMacro.TabPages[i] = b;
-                tabMacro.TabPages[j] = a;
+                //tabMacro.TabPages[i] = b;
+               // tabMacro.TabPages[j] = a;
                 swapped = true;
             }
 
@@ -1817,7 +1817,7 @@ namespace ENNOS
                             CreateNewAndAddTabPage("Import", false);
 
                             // -2 as + tab = 1, and the count is 0 based.
-                            int cloneIndex = tabMacro.TabPages.Count - 2;
+                            //int cloneIndex = tabMacro.TabPages.Count - 2;
 
                             for (int counter = 1; counter <= 24; counter++)
                             {
@@ -1831,13 +1831,13 @@ namespace ENNOS
                                 lineCommand = lineCommand.Replace("$0a", "");
 
                                 MacroData local = CreateNewMacro(lineButton, lineCommand);  
-                                m_ConfiguredMacro[cloneIndex].elements.Add(local);
+                                //m_ConfiguredMacro[cloneIndex].elements.Add(local);
                             }
 
-                            UpdateGrid(cloneIndex);
+                            //UpdateGrid(cloneIndex);
 
                             //select the clone
-                            tabMacro.SelectedIndex = cloneIndex;
+                            //tabMacro.SelectedIndex = cloneIndex;
 
                         }
                     }
